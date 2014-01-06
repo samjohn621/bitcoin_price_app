@@ -1,0 +1,11 @@
+When you HTTParty, you must party hard!
+sandeep@sandeep:~/old_projects/projects/sample_app$ rails c
+Loading development environment (Rails 4.0.2)
+irb(main):001:0> coinbase = Coinbase::Client.new("5d6e5a7891b129eea78841b5995be2c762883b14709b2cc2575f79f767e8ce24")
+=> #<Coinbase::Client:0x00000004ad83c0 @api_key="5d6e5a7891b129eea78841b5995be2c762883b14709b2cc2575f79f767e8ce24">
+irb(main):002:0> coinbase.balance
+=> #<Money fractional:0 currency:BTC>
+irb(main):003:0> coinbase.balance.format
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+=> "0.00000000 BTC"
+irb(main):004:0> 

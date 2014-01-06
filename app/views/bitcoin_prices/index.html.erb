@@ -1,0 +1,57 @@
+<h2>BTC-E Price</h2>
+
+<!--         <p>Time: <%= @btce.json["btc_usd"]["updated"] %></p> -->
+        <p>Price Low: <%= number_to_currency(@btce.json["btc_usd"]["low"]) %></p>
+        <p>Price High: <%= number_to_currency(@btce.json["btc_usd"]["high"]) %></p>
+        <p>Current Price : <%=  number_to_currency(@btce.json["btc_usd"]["last"]) %></p>
+        <p>Buying Price: <%=  number_to_currency(@btce.json["btc_usd"]["buy"]) %></p>
+        <p>Selling Price: <%=  number_to_currency(@btce.json["btc_usd"]["sell"]) %></p>
+        <p>Current Volume: <%= @btce.json["btc_usd"]["vol_cur"] %></p>
+
+
+
+<h2>BTC-E Price</h2>
+
+<!--         <p>Time: <%= @btce.json["btc_usd"]["updated"] %></p> -->
+        <p>Price Low: <%= number_to_currency(@btce.json["btc_usd"]["low"]) %></p>
+        <p>Price High: <%= number_to_currency(@btce.json["btc_usd"]["high"]) %></p>
+        <p>Current Price : <%=  number_to_currency(@btce.json["btc_usd"]["last"]) %></p>
+        <p>Buying Price: <%=  number_to_currency(@btce.json["btc_usd"]["buy"]) %></p>
+        <p>Selling Price: <%=  number_to_currency(@btce.json["btc_usd"]["sell"]) %></p>
+        <p>Current Volume: <%= @btce.json["btc_usd"]["vol_cur"] %></p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Time</th>
+      <th>Price Low</th>
+      <th>Price High</th>
+      <th>Price Current</th>
+      <th>Price Buy</th>
+      <th>Price Sell</th>
+      <th>Volume</th>
+      <th>Volume Current</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+      <tr>
+        <td><%= "BTC-E" %></td>
+        <td><%= @btce.json["btc_usd"]["updated"] %></td>
+        <td><%= @btce.json["btc_usd"]["low"] %></td>
+        <td><%= @btce.json["btc_usd"]["high"] %></td>
+        <td><%= @btce.json["btc_usd"]["last"] %></td>
+        <td><%= @btce.json["btc_usd"]["updated"] %></td>
+        <td><%= @btce.json["btc_usd"]["buy"] %></td>
+        <td><%= @btce.json["btc_usd"]["sell"] %></td>
+        <td><%= @btce.json["btc_usd"]["vol"] %></td>
+        <td><%= @btce.json["btc_usd"]["vol_cur"] %></td>
+      </tr>
+
+  </tbody>
+</table>
+
+<br>
