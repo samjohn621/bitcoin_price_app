@@ -1,57 +1,39 @@
 <h2>BTC-E Price</h2>
 
 <!--         <p>Time: <%= @btce.json["btc_usd"]["updated"] %></p> -->
-        <p>Price Low: <%= number_to_currency(@btce.json["btc_usd"]["low"]) %></p>
-        <p>Price High: <%= number_to_currency(@btce.json["btc_usd"]["high"]) %></p>
-        <p>Current Price : <%=  number_to_currency(@btce.json["btc_usd"]["last"]) %></p>
-        <p>Buying Price: <%=  number_to_currency(@btce.json["btc_usd"]["buy"]) %></p>
-        <p>Selling Price: <%=  number_to_currency(@btce.json["btc_usd"]["sell"]) %></p>
-        <p>Current Volume: <%= @btce.json["btc_usd"]["vol_cur"] %></p>
+  <p>Price Low: <%= number_to_currency(@btce.json["btc_usd"]["low"]) %></p>
+  <p>Price High: <%= number_to_currency(@btce.json["btc_usd"]["high"]) %></p>
+  <p>Current Price : <%=  number_to_currency(@btce.json["btc_usd"]["last"]) %></p>
+  <p>Buying Price: <%=  number_to_currency(@btce.json["btc_usd"]["buy"]) %></p>
+  <p>Selling Price: <%=  number_to_currency(@btce.json["btc_usd"]["sell"]) %></p>
+  <p>Current Volume: <%= @btce.json["btc_usd"]["vol_cur"] %></p>
 
 
 
-<h2>BTC-E Price</h2>
+<h2>BitStamp Price</h2>
 
-<!--         <p>Time: <%= @btce.json["btc_usd"]["updated"] %></p> -->
-        <p>Price Low: <%= number_to_currency(@btce.json["btc_usd"]["low"]) %></p>
-        <p>Price High: <%= number_to_currency(@btce.json["btc_usd"]["high"]) %></p>
-        <p>Current Price : <%=  number_to_currency(@btce.json["btc_usd"]["last"]) %></p>
-        <p>Buying Price: <%=  number_to_currency(@btce.json["btc_usd"]["buy"]) %></p>
-        <p>Selling Price: <%=  number_to_currency(@btce.json["btc_usd"]["sell"]) %></p>
-        <p>Current Volume: <%= @btce.json["btc_usd"]["vol_cur"] %></p>
+  <p>Price Low: <%= number_to_currency(@bitstamp.low) %></p>
+  <p>Price High: <%= number_to_currency(@bitstamp.high) %></p>
+  <p>Current Price : <%=  number_to_currency(@bitstamp.last) %></p>
+  <p>Buying Price: <%=  number_to_currency(@bitstamp.ask) %></p>
+  <p>Selling Price: <%=  number_to_currency(@bitstamp.bid) %></p>
+  <p>Current Volume: <%= @bitstamp.volume %></p>
 
 
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Time</th>
-      <th>Price Low</th>
-      <th>Price High</th>
-      <th>Price Current</th>
-      <th>Price Buy</th>
-      <th>Price Sell</th>
-      <th>Volume</th>
-      <th>Volume Current</th>
-    </tr>
-  </thead>
+<h2>MT.GOX Price</h2>
 
-  <tbody>
+  <p>Price Low: <%= number_to_currency(@mtgox.low) %></p>
+  <p>Price High: <%= number_to_currency(@mtgox.high) %></p>
+  <p>Current Price : <%=  number_to_currency(@mtgox.price) %></p>
+  <p>Buying Price: <%=  number_to_currency(@mtgox.buy) %></p>
+  <p>Selling Price: <%=  number_to_currency(@mtgox.sell) %></p>
+  <p>Previous Price: <%=  number_to_currency(@mtgox.previous_price) %></p>
+  <p>Current Volume: <%= @mtgox.volume %></p>
 
-      <tr>
-        <td><%= "BTC-E" %></td>
-        <td><%= @btce.json["btc_usd"]["updated"] %></td>
-        <td><%= @btce.json["btc_usd"]["low"] %></td>
-        <td><%= @btce.json["btc_usd"]["high"] %></td>
-        <td><%= @btce.json["btc_usd"]["last"] %></td>
-        <td><%= @btce.json["btc_usd"]["updated"] %></td>
-        <td><%= @btce.json["btc_usd"]["buy"] %></td>
-        <td><%= @btce.json["btc_usd"]["sell"] %></td>
-        <td><%= @btce.json["btc_usd"]["vol"] %></td>
-        <td><%= @btce.json["btc_usd"]["vol_cur"] %></td>
-      </tr>
 
-  </tbody>
-</table>
+<h2>Coinbase Price</h2>
+  <p>Buying Price: <%=  @coinbase_buy  %></p>
+  <p>Selling Price: <%=  @coinbase_buy  %></p>
+  
 
 <br>
