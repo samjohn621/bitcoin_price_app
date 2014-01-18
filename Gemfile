@@ -34,6 +34,8 @@ gem 'bitstamp'
 gem 'awesome_print'
 gem 'acts_as_api'
 gem 'actionpack-action_caching'
+gem 'therubyracer'
+gem 'libv8'
 
 
 
