@@ -1,0 +1,25 @@
+<h1>Listing bitcoin_prices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bitcoin_prices.each do |bitcoin_price| %>
+      <tr>
+        <td><%= link_to 'Show', bitcoin_price %></td>
+        <td><%= link_to 'Edit', edit_bitcoin_price_path(bitcoin_price) %></td>
+        <td><%= link_to 'Destroy', bitcoin_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bitcoin price', new_bitcoin_price_path %>

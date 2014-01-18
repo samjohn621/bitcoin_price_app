@@ -1,0 +1,17 @@
+<%= form_for(@bitcoin_price) do |f| %>
+  <% if @bitcoin_price.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bitcoin_price.errors.count, "error") %> prohibited this bitcoin_price from being saved:</h2>
+
+      <ul>
+      <% @bitcoin_price.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

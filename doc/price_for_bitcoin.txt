@@ -1,0 +1,24 @@
+MtGox.ticker
+
+Bitstamp.ticker
+
+ticker = Btce::Ticker.new "btc_usd"
+
+
+coinbase = Coinbase::Client.new("5d6e5a7891b129eea78841b5995be2c762883b14709b2cc2575f79f767e8ce24")
+
+coinbase.buy_price(1)
+
+
+
+http://api.bitcoincharts.com/v1/trades.csv?symbol=mtgoxUSD&start=1303100000
+
+http://api.bitcoincharts.com/v1/trades.csv?symbol=bitstampUSD&start=1303100000
+
+
+http://api.bitcoincharts.com/v1/trades.csv?symbol=btceUSD&start=1303100000
+
+
+https://coinbase.com/api/v1/prices/historical?page=30
+
+
