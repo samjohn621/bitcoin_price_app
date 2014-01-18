@@ -1,5 +1,5 @@
 class BitcoinPrice < ActiveRecord::Base
-
+	
   acts_as_api
 
   api_accessible :price do |template|
@@ -63,5 +63,3 @@ class BitcoinPrice < ActiveRecord::Base
   
 
 end
-
-

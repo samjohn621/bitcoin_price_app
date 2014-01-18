@@ -11,6 +11,7 @@ coinbase.buy_price(1)
 
 
 
+<<<<<<< HEAD
 http://api.bitcoincharts.com/v1/trades.csv?symbol=mtgoxUSD&start=1303100000
 
 http://api.bitcoincharts.com/v1/trades.csv?symbol=bitstampUSD&start=1303100000
@@ -22,3 +23,5 @@ http://api.bitcoincharts.com/v1/trades.csv?symbol=btceUSD&start=1303100000
 https://coinbase.com/api/v1/prices/historical?page=30
 
 
+=======
+>>>>>>> 11c81543ea5acacc2ec7dfc80c2fde309ad1d27c
