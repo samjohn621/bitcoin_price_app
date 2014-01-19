@@ -36,6 +36,9 @@ gem 'acts_as_api'
 gem 'actionpack-action_caching'
 gem 'therubyracer'
 gem 'libv8'
+gem 'faraday'
+gem 'mysql2'
+# gem 'csv'
 
 
 
