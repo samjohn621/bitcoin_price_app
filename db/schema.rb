@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140106005047) do
+ActiveRecord::Schema.define(version: 20140120004548) do
+
+  create_table "bitcoin_historic_prices", force: true do |t|
+    t.datetime "price_at"
+    t.string   "open"
+    t.string   "close"
+    t.string   "high"
+    t.string   "low"
+    t.string   "volume_btc"
+    t.string   "volume_currency"
+    t.string   "avg_price"
+    t.string   "exchange"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "bitcoin_prices", force: true do |t|
     t.datetime "created_at"
