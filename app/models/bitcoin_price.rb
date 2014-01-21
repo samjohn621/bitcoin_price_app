@@ -26,10 +26,15 @@ class BitcoinPrice < ActiveRecord::Base
 	  	"sell" => mtgox.sell,
 	  	"previous_price" => mtgox.previous_price,
 	  	"volume" => mtgox.volume,
-	  	"1_week_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  1.week.ago.strftime("%Y-%m-%d")).first.try(:close) ,
-	  	"1_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  1.month.ago.strftime("%Y-%m-%d")).first.try(:close) ,
-	  	"3_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  3.month.ago.strftime("%Y-%m-%d")).first.try(:close) ,
-	  	"1_year_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  1.year.ago.strftime("%Y-%m-%d")).first.try(:close)
+	  	"1_week_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  1.week.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A" ,
+	  	"1_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  1.month.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A" ,
+	  	"3_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  3.month.ago.strftime("%Y-%m-%d")).first.try(:close)  || "N/A",
+	  	"1_year_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  1.year.ago.strftime("%Y-%m-%d")).first.try(:close)  || "N/A",
+	  	"daily_chart_url" => "",
+	  	"weekly_chart_url" => "",
+	  	"monthly_chart_url" => "",
+	  	"3_month_chart_url" => "",
+	  	"1_year_chart_url" => ""
 	  }	
   end	
 
@@ -41,10 +46,15 @@ class BitcoinPrice < ActiveRecord::Base
 	  	"buy" => bitstamp.ask,
 	  	"sell" => bitstamp.bid,
 	  	"volume" => bitstamp.volume,
-	  	"1_week_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  1.week.ago.strftime("%Y-%m-%d")).first.try(:close) ,
-	  	"1_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  1.month.ago.strftime("%Y-%m-%d")).first.try(:close) ,
-	  	"3_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  3.month.ago.strftime("%Y-%m-%d")).first.try(:close) ,
-	  	"1_year_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  1.year.ago.strftime("%Y-%m-%d")).first.try(:close)
+	  	"1_week_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  1.week.ago.strftime("%Y-%m-%d")).first.try(:close)  || "N/A",
+	  	"1_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  1.month.ago.strftime("%Y-%m-%d")).first.try(:close)  || "N/A",
+	  	"3_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  3.month.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A",
+	  	"1_year_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  1.year.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A",
+	  	"daily_chart_url" => "",
+	  	"weekly_chart_url" => "",
+	  	"monthly_chart_url" => "",
+	  	"3_month_chart_url" => "",
+	  	"1_year_chart_url" => ""
 	  }	
   end	
 
@@ -57,10 +67,15 @@ class BitcoinPrice < ActiveRecord::Base
 	  	"buy" => btce.json["btc_usd"]["buy"].to_s,
 	  	"sell" => btce.json["btc_usd"]["sell"].to_s,
 	  	"volume" => btce.json["btc_usd"]["vol_cur"].to_s,
-	  	"1_week_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  1.week.ago.strftime("%Y-%m-%d")).first.try(:close) ,
-	  	"1_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  1.month.ago.strftime("%Y-%m-%d")).first.try(:close) ,
-	  	"3_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  3.month.ago.strftime("%Y-%m-%d")).first.try(:close) ,
-	  	"1_year_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  1.year.ago.strftime("%Y-%m-%d")).first.try(:close)
+	  	"1_week_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  1.week.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A",
+	  	"1_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  1.month.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A",
+	  	"3_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  3.month.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A",
+	  	"1_year_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  1.year.ago.strftime("%Y-%m-%d")).first.try(:close)|| "N/A",
+	  	"daily_chart_url" => "",
+	  	"weekly_chart_url" => "",
+	  	"monthly_chart_url" => "",
+	  	"3_month_chart_url" => "",
+	  	"1_year_chart_url" => ""
 
 	  }	
   end	
