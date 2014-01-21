@@ -30,11 +30,11 @@ class BitcoinPrice < ActiveRecord::Base
 	  	"1_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  1.month.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A" ,
 	  	"3_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  3.month.ago.strftime("%Y-%m-%d")).first.try(:close)  || "N/A",
 	  	"1_year_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "mtgoxUSD",  1.year.ago.strftime("%Y-%m-%d")).first.try(:close)  || "N/A",
-	  	"daily_chart_url" => "",
-	  	"weekly_chart_url" => "",
-	  	"monthly_chart_url" => "",
-	  	"3_month_chart_url" => "",
-	  	"1_year_chart_url" => ""
+	  	"daily_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"weekly_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"monthly_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"3_month_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"1_year_chart_url" => "http://192.184.82.25/candlestick.png"
 	  }	
   end	
 
@@ -50,11 +50,11 @@ class BitcoinPrice < ActiveRecord::Base
 	  	"1_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  1.month.ago.strftime("%Y-%m-%d")).first.try(:close)  || "N/A",
 	  	"3_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  3.month.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A",
 	  	"1_year_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "bitstampUSD",  1.year.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A",
-	  	"daily_chart_url" => "",
-	  	"weekly_chart_url" => "",
-	  	"monthly_chart_url" => "",
-	  	"3_month_chart_url" => "",
-	  	"1_year_chart_url" => ""
+	  	"daily_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"weekly_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"monthly_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"3_month_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"1_year_chart_url" => "http://192.184.82.25/candlestick.png"
 	  }	
   end	
 
@@ -71,11 +71,11 @@ class BitcoinPrice < ActiveRecord::Base
 	  	"1_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  1.month.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A",
 	  	"3_month_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  3.month.ago.strftime("%Y-%m-%d")).first.try(:close) || "N/A",
 	  	"1_year_ago" => BitcoinHistoricPrice.where("exchange = ? AND DATE(price_at) = ?", "btceUSD",  1.year.ago.strftime("%Y-%m-%d")).first.try(:close)|| "N/A",
-	  	"daily_chart_url" => "",
-	  	"weekly_chart_url" => "",
-	  	"monthly_chart_url" => "",
-	  	"3_month_chart_url" => "",
-	  	"1_year_chart_url" => ""
+	  	"daily_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"weekly_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"monthly_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"3_month_chart_url" => "http://192.184.82.25/candlestick.png",
+	  	"1_year_chart_url" => "http://192.184.82.25/candlestick.png"
 
 	  }	
   end	
